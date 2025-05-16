@@ -3,6 +3,7 @@ import sys
 
 #*******input files*********#
 fullname = sys.argv[1]
+filename = sys.argv[2]
 
 # Open in binary mode
 with open(fullname, "rb") as f:
@@ -184,7 +185,7 @@ cAll_LG.cd(3)
 h6.Draw()
 cAll_LG.Update()
 
-output = "output_"+ fullname + ".root"
+output = "output_"+ filename + ".root"
 
 oFile = TFile(output, 'recreate')
 c1.Write()
